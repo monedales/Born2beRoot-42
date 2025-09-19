@@ -1,0 +1,8 @@
+[Unit]
+Description="Run custom VM info script at startup"
+
+[Service]
+ExecStart=/bin/bash -c '/usr/local/bin/monitoring.sh'
+
+[Install]
+WantedBy=multi-user.target

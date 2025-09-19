@@ -1,0 +1,12 @@
+[Unit]
+Description=Run monitoring.service after boot(and every 10 min)
+
+[Timer]
+#OnUnitActiveSec=10min
+OnStartupSec=10s
+OnCalendar=*:0/10
+Persistent=true
+Unit=monitoring.service
+
+[Install]
+WantedBy=timers.target
